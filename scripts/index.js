@@ -52,7 +52,7 @@ const sliderSwitch = (currentSlide = 0) => {
     sliderContentHeading.classList.add('loyal-text');
     sliderContentHeading.textContent = sliderInfo[currentSlide].heading;
     sliderContentText.textContent = sliderInfo[currentSlide].text;
-    mainSlider.style.background = `url(assets/imgs/main-slider-${currentSlide}.png)`;
+    mainSlider.style.background = `url(assets/imgs/slider/main-slider-${currentSlide}.png)`;
     setTimeout(()=>{
         sliderContentText.classList.remove('loyal-text');
         sliderContentHeading.classList.remove('loyal-text');
