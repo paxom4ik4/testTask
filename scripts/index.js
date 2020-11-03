@@ -46,7 +46,6 @@ const sliderContentHeading = document.querySelector('.slider-content-heading');
 const sliderContentText = document.querySelector('.slider-content-text');
 
 let currentSlide = 0;
-
 const sliderSwitch = (currentSlide = 0) => {
     sliderContentText.classList.add('loyal-text');
     sliderContentHeading.classList.add('loyal-text');

@@ -122,7 +122,6 @@ body {
 @media (max-width: 920px) {
   .header {
     padding: 0 20px;
-
     .wrapper {
       .upper-header {
         .language-switcher-container {
@@ -168,6 +167,7 @@ body {
     }
     .burger-menu {
       i {
+        color: rgba(222, 195, 119, 0.75);
         font-size: 2em;
       }
     }
@@ -215,6 +215,9 @@ body {
     }
   }
 }
+.header .wrapper .lower-header {
+  margin: 0;
+}
 .close-menu {
   transition: 0.5s ease-in;
   opacity: 0;
@@ -237,6 +240,8 @@ body {
   height: 650px;
   transition: 0.35s ease-in;
   background: url(../assets/imgs/slider/main-slider-0.png);
+  background-repeat: no-repeat;
+  background-position: center;
   .wrapper {
     .main-slider-content {
       margin-top: 160px;
@@ -314,6 +319,10 @@ body {
     padding: 0 20px;
     background-position: center;
   }
+  .main-slider .wrapper .main-slider-content .slider-content-button {
+    position: static;
+    margin-top: 20px;
+  }
 }
 @media (max-width: 600px) {
   .main-slider {
@@ -340,6 +349,7 @@ body {
     }
   }
 }
+
 .advantages {
   bottom: -190px;
   position: absolute;
@@ -1287,7 +1297,15 @@ body {
     }
   }
 }
+@media (max-width: 760px) {
+  .about-break {
+    margin-top: 0;
+  }
+}
 @media (max-width: 600px) {
+  .about-break {
+    height: 100px;
+  }
   .about .about-header .about-header-item {
     padding: 0;
   }
@@ -1495,6 +1513,7 @@ body {
 }
 @media (max-width: 940px) {
   .services {
+    margin-top: 0;
     .services-header {
       text-align: center;
     }
@@ -2565,5 +2584,14 @@ body {
   }
   .footer .footer-label {
     text-align: center;
+  }
+}
+@media (max-width: 720px) {
+  .main-slider {
+    background-size: cover !important;
+  }
+  div {
+    background-repeat: no-repeat !important;
+    background-size: 100% !important;
   }
 }
