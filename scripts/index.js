@@ -1,3 +1,26 @@
+// Загрузка изображений
+
+const preloadImages = (images) => {
+    for (let i = 0; i < images.length; i++) {
+      new Image().src = images[i];
+    }
+  }
+
+  const images = [
+    "assets/imgs/slider/main-slider-0.png",
+    "assets/imgs/slider/main-slider-1.png",
+    "assets/imgs/slider/main-slider-2.png",
+    "assets/imgs/slider/main-slider-3.png",
+    "assets/imgs/slider/main-slider-4.png",
+    "assets/imgs/principles/slide0.png",
+    "assets/imgs/principles/slide1.png",
+    "assets/imgs/principles/slide2.png",
+    "assets/imgs/principles/slide3.png",
+    "assets/imgs/principles/slide4.png",
+  ];
+
+  preloadImages(images);
+
 const burgerMenu = document.querySelector('.burger-menu');
 const headerNav = document.getElementById('header-nav');
 const lowerHeader = document.querySelector('.lower-header');
