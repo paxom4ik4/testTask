@@ -667,13 +667,13 @@ body {
         transform: rotate(45deg);
       }
     }
-
     .principles-slider-content {
       width: 1170px;
       height: 100%;
       background: url(../assets/imgs/principles/slide0.png);
       background-repeat: no-repeat;
       background-position: center;
+      transition: 0.5s ease;
     }
   }
 }
@@ -722,10 +722,8 @@ body {
   .principles .wrapper .principles-text .principles-right-text {
     width: auto;
   }
-  .principles-slider-content {
-    width: 100%;
-  }
 }
+
 @media (max-width: 900px) {
   .principles {
     margin: 50px auto 0;
@@ -747,6 +745,22 @@ body {
   }
 }
 @media (max-width: 440px) {
+  .directions .directions-content .directions-content-item {
+    min-width: 290px;
+  }
+  .directions .directions-content .directions-content-item {
+    padding: 20px;
+  }
+  .directions .directions-content .directions-content-item .item-txt-icon {
+    background-size: 50% !important;
+  }
+  .directions
+    .directions-content
+    .directions-content-item
+    .item-txt-icon
+    .directions-item-text {
+    width: 70%;
+  }
   .principles {
     .principles-slider {
       height: 260px;
@@ -1239,7 +1253,14 @@ body {
   background: url(../assets/imgs/about-break.png);
   background-size: cover;
 }
-
+.services
+  .services-content
+  .services-content-row
+  .services-content-item
+  .item-content
+  .item-content-more {
+  cursor: pointer;
+}
 @media (max-width: 1240px) {
   .about-break {
     margin-top: 125px;
@@ -1520,6 +1541,7 @@ body {
     .services-content {
       margin-top: 70px;
       .services-content-row {
+        row-gap: 20px;
         width: auto !important;
         height: auto;
         grid-template-columns: 100%;

@@ -47,11 +47,12 @@ const sliderContentText = document.querySelector('.slider-content-text');
 
 let currentSlide = 0;
 const sliderSwitch = (currentSlide = 0) => {
+    mainSlider.style.background = `url(assets/imgs/slider/main-slider-${currentSlide}.png)`;
     sliderContentText.classList.add('loyal-text');
     sliderContentHeading.classList.add('loyal-text');
     sliderContentHeading.textContent = sliderInfo[currentSlide].heading;
     sliderContentText.textContent = sliderInfo[currentSlide].text;
-    mainSlider.style.background = `url(assets/imgs/slider/main-slider-${currentSlide}.png)`;
+    
     setTimeout(()=>{
         sliderContentText.classList.remove('loyal-text');
         sliderContentHeading.classList.remove('loyal-text');
@@ -78,3 +79,59 @@ const leftliderSwitch = () => {
 }
 rightArrow.addEventListener('click', rightSliderSwitch);
 leftArrow.addEventListener('click', leftliderSwitch);
+
+//slider 2 
+
+const principlesSlider = document.getElementById("principles-slider");
+const principlesLeftArrow = document.querySelector('.principles-left-arrow');
+const principlesRightArrow = document.querySelector('.principles-right-arrow');
+
+let currentPrinciple = 0;
+const principlesSwitch = (currentPrinciple = 0) => {
+    principlesSlider.style.background = `url(assets/imgs/principles/slide${currentPrinciple}.png)`;
+}
+
+const leftPrinciples = () => {
+    if(currentPrinciple === 0) {
+        currentPrinciple = 4;
+    }
+    else {
+        currentPrinciple = currentPrinciple - 1;
+    }
+    principlesSwitch(currentPrinciple);
+}
+
+const rightPrinciples = () => {
+    if(currentPrinciple === 4) {
+        currentPrinciple = 0;
+    }
+    else {
+        currentPrinciple = currentPrinciple + 1;
+    }
+    principlesSwitch(currentPrinciple);
+}
+
+principlesLeftArrow.addEventListener('click', leftPrinciples);
+principlesRightArrow.addEventListener('click', rightPrinciples);
+
+const ratingPagination = document.querySelector('.rating-pagination');
+const ratingLeftArrow = document.querySelector('.rating-left-arrow');
+const ratingRightArrow = document.querySelector('.rating-right-arrow');
+const ratingPaginations = document.querySelectorAll('.pagination-item');
+
+let currentPagination = 0;
+ratingRightArrow.addEventListener('click', () => {
+    currentPagination === 2?currentPagination = 0:currentPagination = currentPagination + 1;
+    ratingPaginations.forEach(pagination => {
+        pagination.classList.remove('active');
+    })
+    ratingPaginations[currentPagination].classList.add('active');
+})
+
+ratingLeftArrow.addEventListener('click', () => {
+    currentPagination === 0 ? currentPagination = 2:currentPagination = currentPagination - 1;
+    ratingPaginations.forEach(pagination => {
+        pagination.classList.remove('active');
+    })
+    ratingPaginations[currentPagination].classList.add('active');
+})
